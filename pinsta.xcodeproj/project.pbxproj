@@ -13,6 +13,7 @@
 		A30B08FC1C8B9442002A50D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A30B08FB1C8B9442002A50D7 /* Assets.xcassets */; };
 		A30B08FF1C8B9442002A50D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30B08FD1C8B9442002A50D7 /* LaunchScreen.storyboard */; };
 		A30B09071C8CCB96002A50D7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30B09061C8CCB96002A50D7 /* LoginViewController.swift */; };
+		A30B09091C8CD5D4002A50D7 /* InstaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30B09081C8CD5D4002A50D7 /* InstaViewController.swift */; };
 		B5C510832B2EAE35941D6E9A /* Pods_pinsta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668D1567CA80695394578148 /* Pods_pinsta.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		A30B08FE1C8B9442002A50D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A30B09001C8B9442002A50D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A30B09061C8CCB96002A50D7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A30B09081C8CD5D4002A50D7 /* InstaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				A30B08FD1C8B9442002A50D7 /* LaunchScreen.storyboard */,
 				A30B09001C8B9442002A50D7 /* Info.plist */,
 				A30B09061C8CCB96002A50D7 /* LoginViewController.swift */,
+				A30B09081C8CD5D4002A50D7 /* InstaViewController.swift */,
 			);
 			path = pinsta;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			files = (
 				A30B09071C8CCB96002A50D7 /* LoginViewController.swift in Sources */,
 				A30B08F71C8B9442002A50D7 /* ViewController.swift in Sources */,
+				A30B09091C8CD5D4002A50D7 /* InstaViewController.swift in Sources */,
 				A30B08F51C8B9442002A50D7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

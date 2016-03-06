@@ -48,17 +48,17 @@
                     <connections>
                         <outlet property="passwordField" destination="s6z-Q6-Mri" id="aLr-MQ-HGk"/>
                         <outlet property="usernameField" destination="OLQ-dh-vpH" id="lNf-Nw-8P7"/>
-                        <segue destination="xIK-08-ze0" kind="presentation" identifier="loginSegue" id="KtF-yf-Kk0"/>
+                        <segue destination="Ij1-up-OAR" kind="presentation" identifier="loginSegue" id="KtF-yf-Kk0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="244.5" y="337.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Insta View Controller-->
         <scene sceneID="Bp0-5L-zzd">
             <objects>
-                <viewController id="xIK-08-ze0" sceneMemberID="viewController">
+                <viewController id="xIK-08-ze0" customClass="InstaViewController" customModule="pinsta" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Kh-yY-Edv"/>
                         <viewControllerLayoutGuide type="bottom" id="AKt-ws-BTC"/>
@@ -68,9 +68,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="8nO-BJ-P9v"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nOm-8P-HPu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1183" y="337"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5hM-3m-mTS">
+            <objects>
+                <navigationController storyboardIdentifier="InstaNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Ij1-up-OAR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vfi-dn-wL8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xIK-08-ze0" kind="relationship" relationship="rootViewController" id="8Tu-Od-QwB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZnG-9M-K1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="651" y="337"/>
         </scene>

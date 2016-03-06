@@ -25,6 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })
             
         )
+        
+        if PFUser.currentUser() != nil {
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyBoard.instantiateViewControllerWithIdentifier("InstaNavigationController")
+            window?.rootViewController = vc
+        }
         // Override point for customization after application launch.
         return true
     }
