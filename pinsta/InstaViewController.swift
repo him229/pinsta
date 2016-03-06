@@ -7,11 +7,23 @@
 //
 
 import UIKit
+import Parse
 
 class InstaViewController: UIViewController {
 
+
+    
+    
+    @IBAction func onLogout(sender: AnyObject) {
+        PFUser.logOut()
+        NSNotificationCenter.defaultCenter().postNotificationName("UserDidLogout", object: nil)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.navigationItem.backBarButtonItem?.title = "Cancel"
+        
 
         // Do any additional setup after loading the view.
     }

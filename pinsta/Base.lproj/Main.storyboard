@@ -68,12 +68,56 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="8nO-BJ-P9v"/>
+                    <navigationItem key="navigationItem" id="8nO-BJ-P9v">
+                        <barButtonItem key="backBarButtonItem" title="Cancel" id="NuY-m8-YlA"/>
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="rtt-a3-QBC">
+                            <connections>
+                                <action selector="onLogout:" destination="xIK-08-ze0" id="2KK-eS-RjW"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="+" id="ZJm-Kd-de4">
+                            <connections>
+                                <segue destination="vhh-Cw-4H0" kind="show" id="HGw-hm-Wnd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nOm-8P-HPu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1183" y="337"/>
+        </scene>
+        <!--Adding View Controller-->
+        <scene sceneID="dQ7-UC-PD6">
+            <objects>
+                <viewController id="vhh-Cw-4H0" customClass="AddingViewController" customModule="pinsta" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cvG-pE-OiK"/>
+                        <viewControllerLayoutGuide type="bottom" id="1gn-5V-LV3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="caX-Dg-K9b">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F6w-LM-7u8" customClass="SelectView" customModule="pinsta" customModuleProvider="target">
+                                <rect key="frame" x="40" y="98" width="240" height="218"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Submit" width="304" id="rXN-Ym-Piu"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="selectView" destination="F6w-LM-7u8" id="y8m-DW-KLQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dnP-o6-twx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1557" y="337"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5hM-3m-mTS">
