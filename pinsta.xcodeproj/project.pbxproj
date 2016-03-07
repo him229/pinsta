@@ -17,6 +17,7 @@
 		A30B090B1C8CE415002A50D7 /* AddingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30B090A1C8CE415002A50D7 /* AddingViewController.swift */; };
 		A30B090D1C8CE8EE002A50D7 /* SelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30B090C1C8CE8EE002A50D7 /* SelectView.swift */; };
 		A30B09111C8CF849002A50D7 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30B09101C8CF849002A50D7 /* Post.swift */; };
+		A30B09131C8D05AC002A50D7 /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30B09121C8D05AC002A50D7 /* PhotoTableViewCell.swift */; };
 		B5C510832B2EAE35941D6E9A /* Pods_pinsta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668D1567CA80695394578148 /* Pods_pinsta.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		A30B090A1C8CE415002A50D7 /* AddingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingViewController.swift; sourceTree = "<group>"; };
 		A30B090C1C8CE8EE002A50D7 /* SelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectView.swift; sourceTree = "<group>"; };
 		A30B09101C8CF849002A50D7 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		A30B09121C8D05AC002A50D7 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				A30B090A1C8CE415002A50D7 /* AddingViewController.swift */,
 				A30B090C1C8CE8EE002A50D7 /* SelectView.swift */,
 				A30B09101C8CF849002A50D7 /* Post.swift */,
+				A30B09121C8D05AC002A50D7 /* PhotoTableViewCell.swift */,
 			);
 			path = pinsta;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A30B09131C8D05AC002A50D7 /* PhotoTableViewCell.swift in Sources */,
 				A30B09071C8CCB96002A50D7 /* LoginViewController.swift in Sources */,
 				A30B08F71C8B9442002A50D7 /* ViewController.swift in Sources */,
 				A30B090D1C8CE8EE002A50D7 /* SelectView.swift in Sources */,

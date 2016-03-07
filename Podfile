@@ -6,6 +6,7 @@ use_frameworks!
 target 'pinsta' do
 
 	pod 'Parse'
+	pod 'ParseUI'
 
 end
 

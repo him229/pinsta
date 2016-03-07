@@ -86,8 +86,10 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-pinsta/Bolts.framework"
   install_framework "Pods-pinsta/Parse.framework"
+  install_framework "Pods-pinsta/ParseUI.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-pinsta/Bolts.framework"
   install_framework "Pods-pinsta/Parse.framework"
+  install_framework "Pods-pinsta/ParseUI.framework"
 fi

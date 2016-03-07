@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '51E1C9120DAF0AF3921D556C'
+               BlueprintIdentifier = '0359A792692F0855A53BA408'
                BlueprintName = 'Pods-pinsta'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_pinsta.framework'>

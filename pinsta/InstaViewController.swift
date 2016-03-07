@@ -8,11 +8,12 @@
 
 import UIKit
 import Parse
+import ParseUI
 
-class InstaViewController: UIViewController {
+class InstaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-
-    
+    @IBOutlet weak var tableView: UITableView!
+    var postlist: [PFObject] = []
     
     @IBAction func onLogout(sender: AnyObject) {
         PFUser.logOut()
@@ -22,6 +23,24 @@ class InstaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        
+        let query = PFQuery(className: "Post")
+        query.orderByDescending("createdAt")
+        query.includeKey("author")
+        query.limit = 20
+        
+        // fetch data asynchronously
+        query.findObjectsInBackgroundWithBlock { (posts: [PFObject]?, error: NSError?) -> Void in
+            if let posts = posts {
+                self.postlist = posts
+                self.tableView.reloadData()
+            } else {
+                print(error?.localizedDescription)
+            }
+        }
 //        self.navigationItem.backBarButtonItem?.title = "Cancel"
         
 
@@ -31,6 +50,26 @@ class InstaViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        if (postlist.count != 0)
+        {
+            return postlist.count
+        }
+        else {return 0}
+    }
+    
+    
+    // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
+    // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCellWithIdentifier("PhotoCell", forIndexPath: indexPath) as! PhotoTableViewCell
+        cell.instagramPost = postlist[indexPath.row]
+        return cell
     }
     
 
