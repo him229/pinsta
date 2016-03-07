@@ -9,7 +9,7 @@
 import UIKit
 import ParseUI
 
-class PhotoTableViewCell: UITableViewCell {
+class PhotoTableViewCell: PFTableViewCell {
 
     @IBOutlet weak var photoImageView: PFImageView!
     
@@ -17,8 +17,9 @@ class PhotoTableViewCell: UITableViewCell {
     
     var instagramPost: PFObject! {
         didSet {
-            self.photoImageView.file = instagramPost["image"] as? PFFile
+            self.photoImageView.file = instagramPost["media"] as? PFFile
             self.photoImageView.loadInBackground()
+            self.captionLabel.text = instagramPost["caption"] as! String
         }
     }
 
