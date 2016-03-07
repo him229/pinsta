@@ -27,6 +27,11 @@ class InstaViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.dataSource = self
         
         
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: "refreshControlAction:", forControlEvents: UIControlEvents.ValueChanged)
+        tableView.insertSubview(refreshControl, atIndex: 0)
+        
+        
         let query = PFQuery(className: "Post")
         query.orderByDescending("createdAt")
         query.includeKey("author")
@@ -41,10 +46,28 @@ class InstaViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 print(error?.localizedDescription)
             }
         }
-//        self.navigationItem.backBarButtonItem?.title = "Cancel"
         
 
         // Do any additional setup after loading the view.
+    }
+    
+    func refreshControlAction(refreshControl: UIRefreshControl) {
+        let query = PFQuery(className: "Post")
+        query.orderByDescending("createdAt")
+        query.includeKey("author")
+        query.limit = 20
+        
+        // fetch data asynchronously
+        query.findObjectsInBackgroundWithBlock { (posts: [PFObject]?, error: NSError?) -> Void in
+            if let posts = posts {
+                self.postlist = posts
+                self.tableView.reloadData()
+                refreshControl.endRefreshing()
+            } else {
+                print(error?.localizedDescription)
+            }
+        }
+    
     }
 
     override func didReceiveMemoryWarning() {
