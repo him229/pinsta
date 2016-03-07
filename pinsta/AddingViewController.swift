@@ -10,7 +10,12 @@ import UIKit
 
 class AddingViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var captionField: UITextField!
     @IBOutlet weak var selectView: SelectView!
+    var finalImage: UIImage!
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,6 +23,21 @@ class AddingViewController: UIViewController, UIImagePickerControllerDelegate, U
         selectView.addGestureRecognizer(gesture)
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func onSubmit(sender: AnyObject) {
+        
+        Post.postUserImage(finalImage, withCaption: captionField.text) { (success:Bool, error:NSError?) -> Void in
+            if success {
+                print("image saved")
+                self.navigationController?.popViewControllerAnimated(true)
+            }
+            else{
+                print(error?.localizedDescription)
+            }
+        
+    }
+    }
+    
     
     func tapped(sender:UITapGestureRecognizer){
         print("Tapped")
@@ -35,7 +55,7 @@ class AddingViewController: UIViewController, UIImagePickerControllerDelegate, U
             let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
             let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
             
-            var finalImage = resize(editedImage, newSize: selectView.frame.size)
+            finalImage = resize(editedImage, newSize: selectView.frame.size)
             
             // Do something with the images (based on your use case)
             selectView.backgroundColor = UIColor(patternImage: finalImage)
@@ -71,5 +91,4 @@ class AddingViewController: UIViewController, UIImagePickerControllerDelegate, U
         // Pass the selected object to the new view controller.
     }
     */
-
 }

@@ -16,6 +16,7 @@
 		A30B09091C8CD5D4002A50D7 /* InstaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30B09081C8CD5D4002A50D7 /* InstaViewController.swift */; };
 		A30B090B1C8CE415002A50D7 /* AddingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30B090A1C8CE415002A50D7 /* AddingViewController.swift */; };
 		A30B090D1C8CE8EE002A50D7 /* SelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30B090C1C8CE8EE002A50D7 /* SelectView.swift */; };
+		A30B09111C8CF849002A50D7 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30B09101C8CF849002A50D7 /* Post.swift */; };
 		B5C510832B2EAE35941D6E9A /* Pods_pinsta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668D1567CA80695394578148 /* Pods_pinsta.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		A30B09081C8CD5D4002A50D7 /* InstaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstaViewController.swift; sourceTree = "<group>"; };
 		A30B090A1C8CE415002A50D7 /* AddingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingViewController.swift; sourceTree = "<group>"; };
 		A30B090C1C8CE8EE002A50D7 /* SelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectView.swift; sourceTree = "<group>"; };
+		A30B09101C8CF849002A50D7 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				A30B09081C8CD5D4002A50D7 /* InstaViewController.swift */,
 				A30B090A1C8CE415002A50D7 /* AddingViewController.swift */,
 				A30B090C1C8CE8EE002A50D7 /* SelectView.swift */,
+				A30B09101C8CF849002A50D7 /* Post.swift */,
 			);
 			path = pinsta;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				A30B090D1C8CE8EE002A50D7 /* SelectView.swift in Sources */,
 				A30B090B1C8CE415002A50D7 /* AddingViewController.swift in Sources */,
 				A30B09091C8CD5D4002A50D7 /* InstaViewController.swift in Sources */,
+				A30B09111C8CF849002A50D7 /* Post.swift in Sources */,
 				A30B08F51C8B9442002A50D7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
